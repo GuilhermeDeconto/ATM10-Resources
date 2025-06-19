@@ -1,0 +1,36 @@
+-- Transfer processed items from machines to the interface
+EVERY 20 TICKS DO
+    INPUT FROM inscriber01, inscriber02, inscriber03, inscriber04, inscriber05, inscriber06 NORTH SIDE
+    OUTPUT TO interface
+END
+
+-- Move items from the inscriber chest into the inscribers
+EVERY 20 TICKS DO
+    INPUT FROM chest1
+    OUTPUT TO inscriber01 SOUTH SIDE
+END
+
+EVERY 20 TICKS DO
+    INPUT FROM chest2
+    OUTPUT TO inscriber02 SOUTH SIDE
+END
+
+EVERY 20 TICKS DO
+    INPUT FROM chest3
+    OUTPUT TO inscriber03 SOUTH SIDE
+END
+
+EVERY 20 TICKS DO
+    INPUT FROM chest4
+    OUTPUT TO inscriber04 SOUTH SIDE
+END
+
+EVERY 20 TICKS DO
+    INPUT FROM chest5
+    OUTPUT TO inscriber05 SOUTH SIDE
+END
+
+EVERY 20 TICKS DO
+    INPUT FROM chest6
+    OUTPUT TO inscriber06 SOUTH SIDE
+END

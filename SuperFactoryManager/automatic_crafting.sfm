@@ -1,0 +1,28 @@
+-- Transfer processed items from machines to the interface
+EVERY 20 TICKS DO
+    INPUT FROM crusher, furnace, enrichment NORTH SIDE
+    OUTPUT TO interface
+END
+
+-- Supply energy from the battery to the machines
+EVERY 5 TICKS DO
+    INPUT forge_energy:: FROM battery TOP SIDE
+    OUTPUT forge_energy:: TO crusher, furnace, enrichment NORTH SIDE
+END
+
+-- Move items from the crusher chest into the crushers
+EVERY 20 TICKS DO
+    INPUT FROM crusherChest
+    OUTPUT TO crusher SOUTH SIDE
+END
+
+-- Move items from the furnace chest into the furnaces
+EVERY 20 TICKS DO
+    INPUT FROM furnaceChest
+    OUTPUT TO furnace
+END
+
+EVERY 20 TICKS DO
+    INPUT FROM enrichmentChest
+    OUTPUT TO enrichment SOUTH SIDE
+END

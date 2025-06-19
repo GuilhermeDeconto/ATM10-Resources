@@ -1,0 +1,9 @@
+EVERY 20 TICKS DO
+    INPUT FROM crusher NORTH SIDE
+    OUTPUT TO chest
+END
+
+EVERY 20 TICKS DO
+    INPUT 64 FROM chest
+    OUTPUT TO enrichment NORTH SIDE
+END
