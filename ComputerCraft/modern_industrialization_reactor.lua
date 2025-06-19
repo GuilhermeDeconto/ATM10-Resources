@@ -31,12 +31,11 @@ while true do
         if not active and percent <= 25 then
             active = true
             redstone.setOutput(redstoneSide, true)
-            displayStatus(percent, amount)
         elseif active and percent >= 90 then
             active = false
             redstone.setOutput(redstoneSide, false)
-            displayStatus(percent, amount)
         end
+        displayStatus(percent, amount)
     end
 
     sleep(1) -- Prevent high CPU usage
